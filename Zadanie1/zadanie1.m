@@ -18,9 +18,22 @@ mianownik=[m d k];
 G=tf(licznik,mianownik);
 
 
-subplot(2,1,1);
+subplot(2,2,1);
 impulse(sys);
-grid on 
-subplot(2,1,2);
+title('Impulse sys');
+grid on;
+
+subplot(2,2,2);
 impulse(G);
-grid on
+title('Impulse G');
+grid on;
+
+subplot(2,2,3);
+step(sys);
+title('Step sys');
+grid on;
+
+subplot(2,2,4);
+step(G);
+title('Step G');
+grid on;
